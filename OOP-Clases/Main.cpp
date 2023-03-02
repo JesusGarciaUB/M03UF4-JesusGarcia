@@ -8,7 +8,9 @@ int main() {
 	srand(time(NULL));
 
 	Enemy e("Bon dia", VAMPIRE);
-	cout << e.GetName() << endl << e.GetHealth() << endl << e.GetType();
+	Enemy e2("Bon dia", VAMPIRE);
+	bool _return = e == e2;
+	cout << _return;
 
 	return 0;
 }

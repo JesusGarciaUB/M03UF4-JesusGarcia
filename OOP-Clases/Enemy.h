@@ -20,4 +20,5 @@ public:
 	Enemy(int h);
 	Enemy(string n, Type t, int h = 100):type(t), name(n), health(h){};
 	bool ReceiveDamage(int damage);
+	bool operator == (const Enemy& other);
 };

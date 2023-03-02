@@ -18,3 +18,8 @@ bool Enemy::ReceiveDamage(int damage) {
 	health -= damage;
 	return health <= 0;
 }
+
+bool Enemy::operator==(const Enemy& other)
+{
+	return name == other.name && type == other.type;
+}
