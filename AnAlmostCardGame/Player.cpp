@@ -62,6 +62,7 @@ void Player::PrintHand()
 Player::Player(string n, int i)
 {
 	name = n;
+	id = i;
 }
 
 Player::Player()
