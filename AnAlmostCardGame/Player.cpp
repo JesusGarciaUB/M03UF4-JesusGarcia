@@ -30,13 +30,24 @@ void Player::InsertCard(Card c)
 
 Card Player::GetCard()
 {
-	if (hand.size() != 0) return hand[0 + rand() % (hand.size() - 0 + 1)];
+	int rPos = 0 + rand() % (hand.size() - 0 + 1);
+	if (hand.size() != 0) {
+		Card _toreturn = hand[rPos];
+		hand.erase(hand.begin() + rPos);
+		return _toreturn;
+	}
 }
 
 Card Player::GetCard(Type t)
 {
+	int pos = 0;
 	for (Card& c : hand) {
-		if (c.GetType() == t) return c;
+		if (c.GetType() == t) { 
+			Card _toreturn = c;
+			hand.erase(hand.begin() + pos);
+			return _toreturn;
+		}
+		pos++;
 	}
 }
 

@@ -21,7 +21,7 @@ Game::Game()
 		int random = 0 + rand() % ((temp.size() - 1) - 0 + 1);
 		deck->push(temp.at(random));
 		temp.erase(temp.begin() + random);
-		//cout << deck->top().GetTypeString() << "(" << deck->top().GetValue() << ") " << endl;
+		cout << deck->top().GetTypeString() << "(" << deck->top().GetValue() << ") " << endl;
 	}
 
 	for (int x = 0; x < 7; x++) {
@@ -30,11 +30,11 @@ Game::Game()
 			deck->pop();
 		}
 	}
-	/*
+	
 	for (Player& p : players) {
 		p.PrintHand();
 	}
-	*/
+	
 }
 
 Card Game::GetNewCard()

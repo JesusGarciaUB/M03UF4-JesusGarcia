@@ -13,8 +13,8 @@ string Card::GetTypeString()
 
 Card::Card()
 {
-	value = 1 + rand() % (12 - 1 + 1);
-	type = Type(0 + rand() % (3 - 0 + 1));
+	value = -1;
+	type = Type(0);
 }
 
 Card::Card(Type t, int v) {
