@@ -51,5 +51,10 @@ void Game::DiscardCard(Card c)
 
 void Game::PrintDiscarded()
 {
-	cout << discarded.top().GetTypeString() << "(" << discarded.top().GetValue() << ")";
+	//cout << discarded.top().GetTypeString() << "(" << discarded.top().GetValue() << ")";
+	stack<Card> temp = discarded;
+	while (temp.size() > 0) {
+		cout << temp.top().GetTypeString() << "(" << temp.top().GetValue() << ") ";
+		temp.pop();
+	}
 }
