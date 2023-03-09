@@ -67,6 +67,6 @@ Player::Player(string n, int i)
 
 Player::Player()
 {
-	id = 0;
+	id = -1;
 	name = "someone";
 }
